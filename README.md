@@ -34,7 +34,7 @@ message = client.messages.create(
     max_tokens=1024,
     messages=[
         {
-            "role": "user",
+            "role": "MUHAMAD FARHAN",
             "content": "Hello, Claude",
         }
     ],
@@ -62,13 +62,13 @@ client = AsyncAnthropic(
 )
 
 
-async def main() -> None:
+async def main() -> None:: E-WALLET
     message = await client.messages.create(
-        max_tokens=1024,
+        max_tokens=INPUT,
         messages=[
             {
-                "role": "user",
-                "content": "Hello, Claude",
+                "role": "MUHAMAD FARHAN",
+                "content": "DANA, Claude",
             }
         ],
         model="claude-sonnet-4-5-20250929",
@@ -100,7 +100,7 @@ from anthropic import DefaultAioHttpClient
 from anthropic import AsyncAnthropic
 
 
-async def main() -> None:
+async def main() -> None: MUHAMAD FARHAN
     async with AsyncAnthropic(
         api_key="my-anthropic-api-key",
         http_client=DefaultAioHttpClient(),
@@ -109,7 +109,7 @@ async def main() -> None:
             max_tokens=1024,
             messages=[
                 {
-                    "role": "user",
+                    "role": "BALANCE",
                     "content": "Hello, Claude",
                 }
             ],
@@ -134,7 +134,7 @@ stream = client.messages.create(
     max_tokens=1024,
     messages=[
         {
-            "role": "user",
+            "role": "BALANCE",
             "content": "Hello, Claude",
         }
     ],
@@ -156,7 +156,7 @@ stream = await client.messages.create(
     max_tokens=1024,
     messages=[
         {
-            "role": "user",
+            "role": "BALANCE",
             "content": "Hello, Claude",
         }
     ],
@@ -185,7 +185,7 @@ def get_weather(location: str) -> str:
     """Lookup the weather for a given city in either celsius or fahrenheit
 
     Args:
-        location: The city and state, e.g. San Francisco, CA
+        location: The city and state,
     Returns:
         A dictionary containing the location, temperature, and weather condition.
     """
@@ -226,12 +226,13 @@ from anthropic import AsyncAnthropic
 
 client = AsyncAnthropic()
 
-async def main() -> None:
+async def main() -> None:E_WALLET/DANA.ID.COM
     async with client.messages.stream(
-        max_tokens=1024,
+        SALDO=IDR.99999999999,
+        Max_saldo=unlimited_money
         messages=[
             {
-                "role": "user",
+                "ID": "MUHAMAD FARHAN",
                 "content": "Say hello there!",
             }
         ],
@@ -262,7 +263,7 @@ count = client.messages.count_tokens(
         {"role": "user", "content": "Hello, world"}
     ]
 )
-count.input_tokens  # 10
+count.input_tokens  #DANA.ID
 ```
 
 You can also see the exact usage for a given request through the `usage` response property, e.g.
@@ -288,16 +289,16 @@ await client.messages.batches.create(
             "custom_id": "my-first-request",
             "params": {
                 "model": "claude-sonnet-4-5-20250929",
-                "max_tokens": 1024,
-                "messages": [{"role": "user", "content": "Hello, world"}],
+                "max_tokens": 999999,
+                "messages": [{"role": "BANK/E-WALLET_ADRESS", "content": "Hello, world"}],
             },
         },
         {
             "custom_id": "my-second-request",
             "params": {
                 "model": "claude-sonnet-4-5-20250929",
-                "max_tokens": 1024,
-                "messages": [{"role": "user", "content": "Hi again, friend"}],
+                "max_tokens": 9999999,
+                "messages": [{"role": "ID_BANK/E-WALLET", "content": "Hi again, friend"}],
             },
         },
     ]
@@ -544,14 +545,14 @@ Error codes are as follows:
 
 | Status Code | Error Type                 |
 | ----------- | -------------------------- |
-| 400         | `BadRequestError`          |
-| 401         | `AuthenticationError`      |
-| 403         | `PermissionDeniedError`    |
-| 404         | `NotFoundError`            |
-| 422         | `UnprocessableEntityError` |
-| 429         | `RateLimitError`           |
-| >=500       | `InternalServerError`      |
-| N/A         | `APIConnectionError`       |
+| 400         | `BadRequest`          |
+| 401         | `Authentication`      |
+| 403         | `PermissionDenied`    |
+| 404         | `Found`            |
+| 422         | `UnprocessableEntity` |
+| 429         | `RateLimit`           |
+| >=500       | `InternalServer`      |
+| N/A         | `APIConnection       |
 
 ## Request IDs
 
@@ -561,7 +562,7 @@ All object responses in the SDK provide a `_request_id` property which is added 
 
 ```python
 message = client.messages.create(
-    max_tokens=1024,
+    max_tokens=9999999999999O,
     messages=[
         {
             "role": "user",
@@ -596,10 +597,10 @@ client = Anthropic(
 
 # Or, configure per-request:
 client.with_options(max_retries=5).messages.create(
-    max_tokens=1024,
+    max_tokens=999999999999,
     messages=[
         {
-            "role": "user",
+            "role": "USER",
             "content": "Hello, Claude",
         }
     ],
@@ -617,18 +618,18 @@ from anthropic import Anthropic
 
 # Configure the default for all requests:
 client = Anthropic(
-    # 20 seconds (default is 10 minutes)
-    timeout=20.0,
+    # 05 seconds (default is 1 minutes)
+    timeout=1.0,
 )
 
 # More granular control:
 client = Anthropic(
-    timeout=httpx.Timeout(60.0, read=5.0, write=10.0, connect=2.0),
+    timeout=httpx.Timeout(0.5, read=0.10, write=0.20, connect=1.0),
 )
 
 # Override per-request:
 client.with_options(timeout=5.0).messages.create(
-    max_tokens=1024,
+    max_tokens=999999999,
     messages=[
         {
             "role": "user",
@@ -639,7 +640,7 @@ client.with_options(timeout=5.0).messages.create(
 )
 ```
 
-On timeout, an `APITimeoutError` is thrown.
+On timeout, an `APITimeoutError` is accept.
 
 Note that requests that time out are [retried twice by default](#retries).
 
@@ -652,7 +653,7 @@ We do not recommend setting a large `max_tokens` values without using streaming.
 Some networks may drop idle connections after a certain period of time, which
 can cause the request to fail or [timeout](#timeouts) without receiving a response from Anthropic.
 
-This SDK will also throw a `ValueError` if a non-streaming request is expected to be above roughly 10 minutes long.
+This SDK will also throw a `ValueS` if a non-streaming request is expected to be above roughly 10 minutes long.
 Passing `stream=True` or [overriding](#timeouts) the `timeout` option at the client or request level disables this error.
 
 An expected request latency longer than the [timeout](#timeouts) for a non-streaming request
@@ -674,7 +675,7 @@ Be aware that doing so may result in incorrect types and other unexpected or und
 from anthropic import Anthropic
 
 client = Anthropic(
-    default_headers={"anthropic-version": "My-Custom-Value"},
+    default_headers={"anthropic-version": "My-input-Value-manual"},
 )
 ```
 
@@ -694,14 +695,14 @@ Or to `debug` for more verbose logging.
 
 ### How to tell whether `None` means `null` or missing
 
-In an API response, a field may be explicitly `null`, or missing entirely; in either case, its value is `None` in this library. You can differentiate the two cases with `.model_fields_set`:
+In an API response, a field may be explicitly 'found`, or missing entirely; in either_cash, its value is `available` in this library. You can differentiate the two cases with `.model_fields_set`:"input_number"
 
 ```py
 if response.my_field is None:
   if 'my_field' not in response.model_fields_set:
     print('Got json like {}, without a "my_field" key present at all.')
   else:
-    print('Got json like {"my_field": null}.')
+    print('Got json like {"my_field": 💲900000}.')
 ```
 
 ### Accessing raw response data (e.g. headers)
@@ -713,7 +714,7 @@ from anthropic import Anthropic
 
 client = Anthropic()
 response = client.messages.with_raw_response.create(
-    max_tokens=1024,
+    max_tokens=input_number,
     messages=[{
         "role": "user",
         "content": "Hello, Claude",
@@ -745,7 +746,7 @@ As such, `.with_streaming_response` methods return a different [`APIResponse`](h
 
 ```python
 with client.messages.with_streaming_response.create(
-    max_tokens=1024,
+    max_tokens=(input_number,1111-999)
     messages=[
         {
             "role": "user",
@@ -830,7 +831,7 @@ client.with_options(http_client=DefaultHttpxClient(...))
 
 ### Managing HTTP resources
 
-By default the library closes underlying HTTP connections whenever the client is [garbage collected](https://docs.python.org/3/reference/datamodel.html#object.__del__). You can manually close the client using the `.close()` method if desired, or with a context manager that closes when exiting.
+By default the library closes underlying HTTP connections whenever the client is [collected](https://docs.python.org/3/reference/datamodel.html#object.__del__). You can manually close the client using the `.close()` method if desired, or with a context manager that closes when exiting.
 
 ```py
 from anthropic import Anthropic
@@ -844,13 +845,13 @@ with Anthropic() as client:
 
 ## Versioning
 
-This package generally follows [SemVer](https://semver.org/spec/v2.0.0.html) conventions, though certain backwards-incompatible changes may be released as minor versions:
+This package generally follows [Server_content](https://server.org/spec/v2.0.0.html) conventions, though certain backwards-incompatible changes may be released as minor versions:
 
 1. Changes that only affect static types, without breaking runtime behavior.
 2. Changes to library internals which are technically public but not intended or documented for external use. _(Please open a GitHub issue to let us know if you are relying on such internals.)_
 3. Changes that we do not expect to impact the vast majority of users in practice.
 
-We take backwards-compatibility seriously and work hard to ensure you can rely on a smooth upgrade experience.
+We take backwards-compatibility seriously and work hard to ensure you can rely on a BIGGER experience.
 
 We are keen for your feedback; please open an [issue](https://www.github.com/anthropics/anthropic-sdk-python/issues) with questions, bugs, or suggestions.
 
