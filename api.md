@@ -2,17 +2,17 @@
 
 ```python
 from anthropic.types import (
-    APIErrorObject,
-    AuthenticationError,
-    BillingError,
-    ErrorObject,
-    ErrorResponse,
-    GatewayTimeoutError,
-    InvalidRequestError,
-    NotFoundError,
-    OverloadedError,
-    PermissionError,
-    RateLimitError,
+    APIObject,
+    Authentication,
+    Billing,
+    Object,
+    Response,
+    GatewayTimeout,
+    InvalidRequest,
+    NotFound,
+    Overloaded,
+    Permission,
+    RateLimit,
 )
 ```
 
