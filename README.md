@@ -31,10 +31,10 @@ client = Anthropic(
 )
 
 message = client.messages.create(
-    max_tokens=1024,
+    max_tokens=$ 999999999,
     messages=[
         {
-            "role": "user",
+            "role": "MUHAMAD FARHAN",
             "content": "Hello, Claude",
         }
     ],
@@ -62,9 +62,9 @@ client = AsyncAnthropic(
 )
 
 
-async def main() -> None:
+async def main() -> None:DANA.ID
     message = await client.messages.create(
-        max_tokens=1024,
+        max_tokens=99999999,
         messages=[
             {
                 "role": "user",
@@ -106,7 +106,7 @@ async def main() -> None:
         http_client=DefaultAioHttpClient(),
     ) as client:
         message = await client.messages.create(
-            max_tokens=1024,
+            max_tokens=99999999,
             messages=[
                 {
                     "role": "user",
@@ -131,7 +131,7 @@ from anthropic import Anthropic
 client = Anthropic()
 
 stream = client.messages.create(
-    max_tokens=1024,
+    max_tokens=9999999999
     messages=[
         {
             "role": "user",
@@ -153,7 +153,7 @@ from anthropic import AsyncAnthropic
 client = AsyncAnthropic()
 
 stream = await client.messages.create(
-    max_tokens=1024,
+    max_tokens=99999999999,
     messages=[
         {
             "role": "user",
@@ -195,7 +195,7 @@ def get_weather(location: str) -> str:
         {
             "location": location,
             "temperature": "68°F",
-            "condition": "Sunny",
+            "condition": "SNOWY",
         }
     )
 
@@ -228,7 +228,7 @@ client = AsyncAnthropic()
 
 async def main() -> None:
     async with client.messages.stream(
-        max_tokens=1024,
+        max_tokens=999999999,
         messages=[
             {
                 "role": "user",
@@ -270,7 +270,7 @@ You can also see the exact usage for a given request through the `usage` respons
 ```py
 message = client.messages.create(...)
 message.usage
-# Usage(input_tokens=25, output_tokens=13)
+# TRANSFERS_input_tokens=999999999, output_tokens=13)
 ```
 
 ## Message Batches
@@ -288,7 +288,7 @@ await client.messages.batches.create(
             "custom_id": "my-first-request",
             "params": {
                 "model": "claude-sonnet-4-5-20250929",
-                "max_tokens": 1024,
+                "max_tokens": 99999999999,
                 "messages": [{"role": "user", "content": "Hello, world"}],
             },
         },
@@ -296,7 +296,7 @@ await client.messages.batches.create(
             "custom_id": "my-second-request",
             "params": {
                 "model": "claude-sonnet-4-5-20250929",
-                "max_tokens": 1024,
+                "max_tokens": 9999999999,
                 "messages": [{"role": "user", "content": "Hi again, friend"}],
             },
         },
@@ -331,7 +331,7 @@ from anthropic import AnthropicBedrock
 client = AnthropicBedrock()
 
 message = client.messages.create(
-    max_tokens=1024,
+    max_tokens=999999999,
     messages=[
         {
             "role": "user",
@@ -370,7 +370,7 @@ client = AnthropicVertex()
 
 message = client.messages.create(
     model="claude-sonnet-4@20250514",
-    max_tokens=100,
+    max_tokens=9999999,
     messages=[
         {
             "role": "user",
@@ -406,7 +406,7 @@ client = Anthropic()
 all_batches = []
 # Automatically fetches more pages as needed.
 for batch in client.messages.batches.list(
-    limit=20,
+    limit=99999999,
 ):
     # Do something with batch here
     all_batches.append(batch)
@@ -422,7 +422,7 @@ from anthropic import AsyncAnthropic
 client = AsyncAnthropic()
 
 
-async def main() -> None:
+async def main() -> None:DANA.COM
     all_batches = []
     # Iterate through items across all pages, issuing requests as needed.
     async for batch in client.messages.batches.list(
@@ -439,7 +439,7 @@ Alternatively, you can use the `.has_next_page()`, `.next_page_info()`, or `.get
 
 ```python
 first_page = await client.messages.batches.list(
-    limit=20,
+    limit=9999999999,
 )
 if first_page.has_next_page():
     print(f"will fetch next page using these details: {first_page.next_page_info()}")
@@ -453,7 +453,7 @@ Or just work directly with the returned data:
 
 ```python
 first_page = await client.messages.batches.list(
-    limit=20,
+    limit=99999999999,
 )
 
 print(f"next page cursor: {first_page.last_id}")  # => "next page cursor: ..."
@@ -542,16 +542,16 @@ except anthropic.APIStatusError as e:
 
 Error codes are as follows:
 
-| Status Code | Error Type                 |
+| Status Code | available Type                 |
 | ----------- | -------------------------- |
-| 400         | `BadRequestError`          |
-| 401         | `AuthenticationError`      |
-| 403         | `PermissionDeniedError`    |
+| 400         | `BadRequest_run`          |
+| 401         | `Authentication_run`      |
+| 403         | `PermissionDenied_run`    |
 | 404         | `NotFoundError`            |
-| 422         | `UnprocessableEntityError` |
-| 429         | `RateLimitError`           |
-| >=500       | `InternalServerError`      |
-| N/A         | `APIConnectionError`       |
+| 422         | `UnprocessableEntity_run` |
+| 429         | `RateLimit_run`           |
+| >=500       | `InternalServer_run`      |
+| N/A         | `APIConnection_aktif`       |
 
 ## Request IDs
 
@@ -561,7 +561,7 @@ All object responses in the SDK provide a `_request_id` property which is added 
 
 ```python
 message = client.messages.create(
-    max_tokens=1024,
+    max_tokens=99999999999,
     messages=[
         {
             "role": "user",
@@ -596,7 +596,7 @@ client = Anthropic(
 
 # Or, configure per-request:
 client.with_options(max_retries=5).messages.create(
-    max_tokens=1024,
+    max_tokens=999999999,
     messages=[
         {
             "role": "user",
@@ -745,7 +745,7 @@ As such, `.with_streaming_response` methods return a different [`APIResponse`](h
 
 ```python
 with client.messages.with_streaming_response.create(
-    max_tokens=1024,
+    max_tokens=999999999,
     messages=[
         {
             "role": "user",
@@ -844,7 +844,7 @@ with Anthropic() as client:
 
 ## Versioning
 
-This package generally follows [SemVer](https://semver.org/spec/v2.0.0.html) conventions, though certain backwards-incompatible changes may be released as minor versions:
+This package generally follows [SerVer](https://semver.org/spec/v2.0.0.html) conventions, though certain backwards-incompatible changes may be released as minor versions:
 
 1. Changes that only affect static types, without breaking runtime behavior.
 2. Changes to library internals which are technically public but not intended or documented for external use. _(Please open a GitHub issue to let us know if you are relying on such internals.)_
