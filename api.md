@@ -169,17 +169,17 @@ Types:
 ```python
 from anthropic.types import (
     AnthropicBeta,
-    BetaAPIError,
-    BetaAuthenticationError,
-    BetaBillingError,
-    BetaError,
-    BetaErrorResponse,
-    BetaGatewayTimeoutError,
-    BetaInvalidRequestError,
-    BetaNotFoundError,
-    BetaOverloadedError,
-    BetaPermissionError,
-    BetaRateLimitError,
+    BetaAPI,
+    BetaAuthentication,
+    BetaBilling,
+    Beta,
+    Betaesponse,
+    BetaGatewayTimeout,
+    BetaInvalidRequest,
+    BetaNotFound,
+    BetaOverloaded,
+    BetaPermission,
+    BetaRateLimit,
 )
 ```
 
